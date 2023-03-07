@@ -4,33 +4,48 @@
     <title>Rotating 3D Sphere</title>
     <meta charset="utf-8">
     <style>
+        /* Set margin to 0 to remove any default browser padding */
         body { margin: 0; }
+        /* Set canvas width and height to 100% to fill the whole screen */
         canvas { width: 100%; height: 100%; }
     </style>
 </head>
 <body>
+    <!-- Include the Three.js library from a CDN -->
     <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/build/three.min.js"></script>
     <script>
+        // Create a WebGL renderer and append it to the body
         const renderer = new THREE.WebGLRenderer();
         renderer.setSize(window.innerWidth, window.innerHeight);
         document.body.appendChild(renderer.domElement);
 
+        // Create a 3D camera with a 75 degree field of view, aspect ratio based on window size, and near/far planes
         const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        // Move the camera 5 units back from the origin along the z-axis
         camera.position.z = 5;
 
+        // Create a new Three.js scene
         const scene = new THREE.Scene();
 
+        // Create a sphere geometry with a radius of 1 and 32 segments for both horizontal and vertical subdivision
         const geometry = new THREE.SphereGeometry(1, 32, 32);
+        // Create a material with a white color and wireframe mode
         const material = new THREE.MeshBasicMaterial({ color: 0xffffff, wireframe: true });
+        // Create a mesh from the geometry and material
         const sphere = new THREE.Mesh(geometry, material);
+        // Add the mesh to the scene
         scene.add(sphere);
 
+        // Define an animation function that gets called recursively using requestAnimationFrame()
         function animate() {
             requestAnimationFrame(animate);
+            // Rotate the sphere around the x and y axes by 0.01 radians per frame
             sphere.rotation.x += 0.01;
             sphere.rotation.y += 0.01;
+            // Render the scene with the camera using the WebGL renderer
             renderer.render(scene, camera);
         }
+        // Call the animation function to start the animation loop
         animate();
     </script>
 </body>
