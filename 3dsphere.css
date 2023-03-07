@@ -1,0 +1,4 @@
+/* Set margin to 0 to remove any default browser padding */
+body { margin: 0; }
+/* Set canvas width and height to 100% to fill the whole screen */
+canvas { width: 100%; height: 100%; }
