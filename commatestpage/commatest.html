@@ -3,17 +3,15 @@
   <head>
     <meta charset="UTF-8">
     <title>Comma-Separated Text Generator</title>
-    <link rel="stylesheet" href="style.css"> <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <h1>Comma-Separated Text Generator</h1>
-    <form>
-      <label for="input-text">Enter some text:</label>
-      <input type="text" id="input-text" placeholder="Type here..." onkeydown="if (event.keyCode === 13) { event.preventDefault(); generateText(); }">
-      <button onclick="generateText()">Generate</button>
-    </form>
+    <p>Enter some text:</p>
+    <input type="text" id="input-text">
+    <button id="generate-btn">Generate</button>
     <div id="output-container"></div>
     
-    <script src="script.js"></script> <!-- Link to external JavaScript file -->
+    <script src="script.js"></script>
   </body>
 </html>
