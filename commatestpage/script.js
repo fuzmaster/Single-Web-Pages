@@ -1,11 +1,19 @@
 let inputArray = [];
 const generateBtn = document.getElementById("generate-btn");
+const inputText = document.getElementById("input-text");
+
 generateBtn.addEventListener("click", generateText);
+inputText.addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) {
+    event.preventDefault();
+    generateBtn.click();
+  }
+});
 
 function generateText() {
-  const input = document.getElementById("input-text").value;
+  const input = inputText.value;
   inputArray.push(input);
-  document.getElementById("input-text").value = "";
+  inputText.value = "";
   const output = inputArray.join(", ");
   const outputContainer = document.getElementById("output-container");
   const outputLine = document.createElement("p");
