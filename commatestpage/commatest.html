@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Comma-Separated Text Generator</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to external CSS file -->
+  </head>
+  <body>
+    <h1>Comma-Separated Text Generator</h1>
+    <form>
+      <label for="input-text">Enter some text:</label>
+      <input type="text" id="input-text" placeholder="Type here..." onkeydown="if (event.keyCode === 13) { event.preventDefault(); generateText(); }">
+      <button onclick="generateText()">Generate</button>
+    </form>
+    <div id="output-container"></div>
+    
+    <script src="script.js"></script> <!-- Link to external JavaScript file -->
+  </body>
+</html>

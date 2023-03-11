@@ -1,0 +1,75 @@
+/* Set the font and background color for the page */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f1f1f1;
+  }
+  
+  /* Style the heading */
+  h1 {
+    font-size: 36px;
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  /* Style the form container */
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+  }
+  
+  /* Style the form label and text input */
+  label, input {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  input[type="text"] {
+    /* Style the text input with rounded corners, a box shadow, and a width */
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    width: 400px;
+  }
+  
+  /* Style the generate button */
+  button {
+    /* Style the button with rounded corners, a box shadow, a background color, and a text color */
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    background-color: #4CAF50;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out; /* Add a transition effect when hovering over the button */
+    margin-top: 20px;
+  }
+  
+  /* Style the generate button when hovering over it */
+  button:hover {
+    transform: translateY(-2px);
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Style the generate button when clicked on it */
+  button:active {
+    transform: translateY(2px);
+    box-shadow: none;
+  }
+  
+  /* Style the output container */
+  #output-container {
+    margin-top: 50px;
+    font-size: 24px;
+    text-align: center;
+  }
+  
+  /* Style the output text */
+  #output-container p {
+    margin-bottom: 10px;
+  }
+  
